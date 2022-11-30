@@ -9,6 +9,7 @@ public class CountRunner {
         date = date /10000;
         int month = date /10;
 
-        System.out.println("There are " + days + "until Christmas");
+        CountRunner myobj = new CountRunner();
+        System.out.println("There are " + date + "until Christmas");
     }
 }
