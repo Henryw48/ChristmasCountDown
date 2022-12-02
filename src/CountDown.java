@@ -1,8 +1,12 @@
 public class CountDown {
 
+
     private int day;
     private int month;
 
+    private int christmas = 359;
+
+    final int year = 2022;
 
     /* These are the months and how many days are in each month */
     int January = 31;
@@ -19,22 +23,24 @@ public class CountDown {
     int December = 31;
 
 
-    public static void getDate(int month, int day) {
+    public void getDate(int m, int d) {
         /* gets the date of the user choice */
-        System.out.println("Today is " + month + "/" + day + ".");
+        month = m;
+        day = d;
+        System.out.println("Today is " + m + "/" + d + "/" + year);
     }
 
     public String CountDown() {
         /* Initializes Date to the day of Christmas */
-        month = December;
         day = 25;
-        return "Christmas is on the " + day + "th day of" + December;
+        return "Christmas is on the " + day + "th day of December";
     }
 
     public int getDays() {
         /* This is the method that will help implement the number of days till Christmas */
         if (month == 1) {
-            System.out.println("Date is January");
+            int day = (January - this.day);
+            System.out.println("Date is January" + day);
         }
         else if (month == 2) {
             System.out.println("Date is February");
