@@ -5,29 +5,33 @@ public class CountDown {
 
 
     /* These are the months and how many days are in each month */
-    String January = "31 Days";
-    String February = "28 Days";
-    String March = "31 Days";
-    String April = "30 Days";
-    String May = "31 Days";
-    String June = "30 Days";
-    String July = "31 Days";
-    String August = "31 Days";
-    String September = "30 Days";
-    String October = "31 Days";
-    String November = "30 Days";
-    String December = "31 Days";
+    int January = 31;
+    int February = 28;
+    int March = 31;
+    int April = 30;
+    int May = 31;
+    int June = 30;
+    int July = 31;
+    int August = 31;
+    int September = 30;
+    int October = 31;
+    int November = 30;
+    int December = 31;
 
 
-    public void getDate(int month, int day) {
+    public static void getDate(int month, int day) {
         /* gets the date of the user choice */
+        System.out.println("Today is " + month + "/" + day + ".");
     }
 
-    public CountDown() {
+    public String CountDown() {
         /* Initializes Date to the day of Christmas */
+        month = December;
+        day = 25;
+        return "Christmas is on the " + day + "th day of" + December;
     }
 
-    public void getDays() {
+    public int getDays() {
         /* This is the method that will help implement the number of days till Christmas */
         if (month == 1) {
             System.out.println("Date is January");
@@ -62,9 +66,10 @@ public class CountDown {
         else if (month == 11) {
             System.out.println("Date is November");
         }
-        else if (month == 12) {
+        else {
             System.out.println("Date is December");
         }
+        return 0;
     }
 
     public void afterChristmas() {
