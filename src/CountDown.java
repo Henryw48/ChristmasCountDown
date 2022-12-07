@@ -1,14 +1,11 @@
 public class CountDown {
 
-
     private int day;
-    private int month;
+    private String month;
+    private int christmas;
+    private int year;
+    private int total;
 
-    private int christmas = 359;
-
-    final int year = 2022;
-
-    /* These are the months and how many days are in each month */
     int January = 31;
     int February = 28;
     int March = 31;
@@ -20,69 +17,93 @@ public class CountDown {
     int September = 30;
     int October = 31;
     int November = 30;
+
     int December = 31;
 
+    public CountDown() {
+    christmas = 359;
+    year = 2022;
+    total = 0;
+    }
 
-    public void getDate(int m, int d) {
+    public String getDate(String m, int d) {
         /* gets the date of the user choice */
         month = m;
         day = d;
-        System.out.println("Today is " + m + "/" + d + "/" + year);
-    }
-
-    public String CountDown() {
-        /* Initializes Date to the day of Christmas */
-        day = 25;
-        return "Christmas is on the " + day + "th day of December";
+        return "Today is " + m + "/" + d + "/" + year;
     }
 
     public int getDays() {
         /* This is the method that will help implement the number of days till Christmas */
-        if (month == 1) {
-            int day = (January - this.day);
-            System.out.println("Date is January" + day);
+        if (month.equals("1")) {
+            total = day;
+            int s = christmas - total;
+            System.out.println("That means there are " + s +" days until Christmas");
         }
-        else if (month == 2) {
-            System.out.println("Date is February");
+        else if (month.equals("2")) {
+            total = January + day;
+            int s = christmas - total;
+            System.out.println("That means there are " + s + " days until Christmas");
         }
-        else if (month == 3) {
-            System.out.println("Date is March");
+        else if (month.equals("3")) {
+            total = (January + February) + day;
+            int s = christmas - total;
+            System.out.println("That means there are " + s + " days until Christmas");
         }
-        else if (month == 4) {
-            System.out.println("Date is April");
+        else if (month.equals("4")) {
+            total = (January + February + March) + day;
+            int s = christmas - total;
+            System.out.println("That means there are " + s + " days until Christmas");
         }
-        else if (month == 5) {
-            System.out.println("Date is May");
+        else if (month.equals("5")) {
+            total = (January + February + March + April) + day;
+            int s = christmas - total;
+            System.out.println("That means there are " + s + " days until Christmas");
         }
-        else if (month == 6) {
-            System.out.println("Date is June");
+        else if (month.equals("6")) {
+            total = (January + February + March + April + May) + day;
+            int s = christmas - total;
+            System.out.println("That means there are " + s + " days until Christmas");
         }
-        else if (month == 7) {
-            System.out.println("Date is July");
+        else if (month.equals("7")) {
+            total = (January + February + March + April + May + June) + day;
+            int s = christmas - total;
+            System.out.println("That means there are " + s + " days until Christmas");
         }
-        else if (month == 8) {
-            System.out.println("Date is August");
+        else if (month.equals("8")) {
+            total = (January + February + March + April + May + June + July) + day;
+            int s = christmas - total;
+            System.out.println("That means there are " + s + " days until Christmas");
         }
-        else if (month == 9) {
-            System.out.println("Date is September");
+        else if (month.equals("9")) {
+            total = (January + February + March + April + May + June + July + August) + day;
+            int s = christmas - total;
+            System.out.println("That means there are " + s + " days until Christmas");
         }
-        else if (month == 10) {
-            System.out.println("Date is October");
+        else if (month.equals("10")) {
+            total = (January + February + March + April + May + June + July + August + September) + day;
+            int s = christmas - total;
+            System.out.println("That means there are " + s + " days until Christmas");
         }
-        else if (month == 11) {
-            System.out.println("Date is November");
+        else if (month.equals("11")) {
+            total = (January + February + March + April + May + June + July + August + September + October) + day;
+            int s = christmas - total;
+            System.out.println("That means there are " + s + " days until Christmas");
         }
         else {
-            System.out.println("Date is December");
+            if ((month.equals("12")) && (day >= 26 && day <= 31)) {
+                System.out.println("Uh oh! Christmas has passed");
+            }
+            if ((day == 25)) {
+                System.out.println("SO THAT MEANS TODAY IS CHRISTMAS");
+            }
+            else {
+                total = (January + February + March + April + May + June + July + August + September + October + November) + day;
+                int s = christmas - total;
+                System.out.println("That means there are " + s + " days until Christmas");
+            }
         }
         return 0;
-    }
-
-    public void afterChristmas() {
-        /* Any days that the user implements after Christmas will activate this method */
-        if ((month == 12) && (day >= 26 && day <= 31)) {
-            System.out.println("Uh oh! Christmas has passed");
-        }
     }
 }
 
