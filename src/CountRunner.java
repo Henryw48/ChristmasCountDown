@@ -3,7 +3,7 @@ public class CountRunner {
 
         CountDown CountDownObject = new CountDown();
 
-        System.out.println(CountDownObject.getDate("1", 1));
+        System.out.println(CountDownObject.getDate("12", 26));
         System.out.println("And...");
         System.out.println("Christmas is on the 25th of December");
 
